@@ -1,0 +1,11 @@
+spec_version: "0.1.0"
+name: customer-refund-evidence-reviewer
+version: 0.1.0
+description: Review refund cases for transaction, policy, amount, and reviewer evidence.
+skills:
+  - customer-refund-evidence-reviewer-skill
+tools:
+  - review-customer-refund-evidence-reviewer
+tags:
+  - customer-support
+  - evidence-driven

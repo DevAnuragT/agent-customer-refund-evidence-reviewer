@@ -1,0 +1,29 @@
+{
+  "slug": "customer-refund-evidence-reviewer",
+  "title": "Customer Refund Evidence Reviewer",
+  "category": "customer-support",
+  "description": "Review refund cases for transaction, policy, amount, and reviewer evidence.",
+  "fields": {
+    "case_id": {
+      "label": "case id",
+      "kind": "required",
+      "minimum": 0
+    },
+    "transaction_id": {
+      "label": "transaction id",
+      "kind": "required",
+      "minimum": 0
+    },
+    "policy_basis": {
+      "label": "policy basis",
+      "kind": "text",
+      "minimum": 30
+    },
+    "reviewer": {
+      "label": "reviewer",
+      "kind": "required",
+      "minimum": 0
+    }
+  },
+  "limitations": "Uses caller-provided evidence only; cannot confirm external facts. Human review remains required."
+}

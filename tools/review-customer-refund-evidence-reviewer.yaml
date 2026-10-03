@@ -1,0 +1,59 @@
+{
+  "name": "review-customer-refund-evidence-reviewer",
+  "description": "Run Customer Refund Evidence Reviewer",
+  "version": "0.1.0",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "payload": {
+        "type": "object",
+        "properties": {
+          "case_id": {
+            "type": "string",
+            "description": "case id"
+          },
+          "transaction_id": {
+            "type": "string",
+            "description": "transaction id"
+          },
+          "policy_basis": {
+            "type": "string",
+            "description": "policy basis"
+          },
+          "reviewer": {
+            "type": "string",
+            "description": "reviewer"
+          }
+        },
+        "required": [
+          "case_id",
+          "transaction_id",
+          "policy_basis",
+          "reviewer"
+        ]
+      }
+    },
+    "required": [
+      "payload"
+    ]
+  },
+  "output_schema": {
+    "type": "object",
+    "properties": {
+      "status": {
+        "type": "string"
+      },
+      "score": {
+        "type": "object"
+      },
+      "findings": {
+        "type": "array"
+      }
+    }
+  },
+  "implementation": {
+    "type": "script",
+    "path": "review-customer-refund-evidence-reviewer.py",
+    "runtime": "python3"
+  }
+}
